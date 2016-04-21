@@ -2,7 +2,6 @@ package com.youmeek.ssm;
 
 import com.youmeek.ssm.module.user.pojo.SysUser;
 import com.youmeek.ssm.module.user.service.SysUserService;
-import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -14,7 +13,6 @@ import javax.annotation.Resource;
 @ContextConfiguration(locations = {"classpath*:spring/applicationContext*.xml"})
 public class SSMTest {
 
-	private Logger logger = Logger.getLogger(this.getClass().getName());
 	
 	@Resource
 	private SysUserService sysUserService;
@@ -22,6 +20,6 @@ public class SSMTest {
 	@Test
 	public void test1() {
 		SysUser sysUser = sysUserService.getById(1L);
-		logger.info("--------------------------------" + sysUser.toString());
+		System.out.println("--------------------------------" + sysUser.toString());
 	}
 }
