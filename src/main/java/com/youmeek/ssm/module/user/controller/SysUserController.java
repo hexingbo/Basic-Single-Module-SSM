@@ -17,7 +17,7 @@ import java.util.Date;
 @RequestMapping("/sysUserController")
 public class SysUserController {
 	
-	static final Logger LOG = LoggerFactory.getLogger(SysUserController.class);
+	private static final Logger LOG = LoggerFactory.getLogger(SysUserController.class);
 	
 	@Resource
 	private SysUserService sysUserService;
